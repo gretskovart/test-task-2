@@ -31,6 +31,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
+    "gift": "^0.10.2",
     "normalize.css": "^8.0.1"
   }
 }
