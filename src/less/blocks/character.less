@@ -1,0 +1,95 @@
+@import "./../variables.less";
+
+.character{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 356px;
+  height: 307px;
+  &__body{
+    position: relative;
+    width: 201px;
+    height: 276px;
+    top: -31px;
+    &--blue{
+      background: url(../images/sprite.svg#blue-body) center no-repeat;
+      background-size: cover;
+    }
+    &--green{
+      background: url(../images/sprite.svg#green-body) center no-repeat;
+      background-size: cover;
+    }
+    &--pink{
+      background: url(../images/sprite.svg#pink-body) center no-repeat;
+      background-size: cover;
+    }
+  }
+  &__face{
+    position: absolute;
+    width: 91px;
+    height: 54px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 84px;
+    &--blue-laugh{
+      background: url('../images/sprite.svg#blue-laugh') center no-repeat;
+      background-size: cover;
+    }
+    &--blue-scare{
+      background: url('../images/sprite.svg#blue-scare') center no-repeat;
+      background-size: cover;
+    }
+    &--blue-simple{
+      background: url('../images/sprite.svg#blue-simple') center no-repeat;
+      background-size: cover;
+    }
+    &--green-angry{
+      background: url('../images/sprite.svg#green-angry') center no-repeat;
+      background-size: cover;
+    }
+    &--green-scare{
+      background: url('../images/sprite.svg#green-scare') center no-repeat;
+      background-size: cover;
+    }
+    &--green-simple{
+      background: url('../images/sprite.svg#green-simple') center no-repeat;
+      background-size: cover;
+    }
+    &--pink-laugh{
+      background: url('../images/sprite.svg#pink-laugh') center no-repeat;
+      background-size: contain;
+      height: 70px;
+    }
+    &--pink-scare{
+      background: url('../images/sprite.svg#pink-scare') center no-repeat;
+      background-size: cover;
+    }
+    &--pink-simple{
+      background: url('../images/sprite.svg#pink-simple') center no-repeat;
+      background-size: cover;
+    }
+  }
+  &__table{
+    position: absolute;
+    width: 356px;
+    height: 130px;
+    background: url('../images/sprite.svg#table') center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 356px) {
+  .character{
+    width: @mobile_table_width;
+    &__table{
+      width: @mobile_table_width;
+    }
+    &__face{
+      width: 70px;
+    }
+    &__body{
+      background-size: contain;
+    }
+  }
+}

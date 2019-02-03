@@ -1,0 +1,97 @@
+@import "./../variables.less";
+
+.skills-cloud{
+  height: 310px;
+  width: 356px;
+  position: relative;
+  column-count: 3;
+  column-gap: 15px;
+  text-align: center;
+  &__tag{
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+    background: #006BCC;
+    margin-bottom: 15px;
+    &--junior{
+      &-big{
+        font-size: 21px;
+      }
+      &-medium{
+        font-size: 16px;
+      }
+      &-small{
+        font-size: 12px;
+      }
+    }
+    &--middle{
+      &-big{
+        padding: 13px;
+        font-size: 18px;
+      }
+      &-medium{
+        padding: 9px;
+        font-size: 14px;
+      }
+      &-small{
+        padding: 6px;
+        font-size: 10px;
+      }
+    }
+    &--senior{
+      &-big{
+        padding: 11px;
+        font-size: 15px;
+      }
+      &-medium{
+        padding: 7px;
+        font-size: 12px;
+      }
+      &-small{
+        padding: 4px;
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-cloud{
+    width: @mobile_table_width;
+    &__tag--junior{
+      &-big{
+        font-size: 17px;
+      }
+      &-medium{
+        font-size: 12px;
+      }
+      &-small{
+        font-size: 8px;
+      }
+    }
+    &__tag--middle{
+      &-big{
+        font-size: 14px;
+      }
+      &-medium{
+        font-size: 10px;
+      }
+      &-small{
+        font-size: 6px;
+      }
+    }
+    &__tag--senior{
+      &-big{
+        font-size: 11px;
+      }
+      &-medium{
+        font-size: 8px;
+      }
+      &-small{
+        font-size: 4px;
+      }
+    }
+  }
+}

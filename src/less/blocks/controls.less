@@ -1,0 +1,49 @@
+.controls{
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  padding: 15px;
+  &__item{
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    position: relative;
+    &--3{
+      margin: 0;
+    }
+    &::before, &--checked{
+      content: '';
+      border: 1px solid #D6D6D6;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+      pointer-events: none;
+      z-index: 0;
+    }
+    &__radio{
+      opacity: 0;
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      cursor: pointer;
+      &:checked + .controls__item--checked{
+        border: 3px solid #006BCC;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #006BCC;
+        }
+      }
+    }
+  }
+}
