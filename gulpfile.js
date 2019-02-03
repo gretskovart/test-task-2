@@ -11,6 +11,7 @@ const babel = require(`gulp-babel`);
 const imagemin = require(`gulp-imagemin`);
 const svgSprite = require(`gulp-svg-sprite`);
 const rollup = require(`gulp-better-rollup`);
+const deploy = require(`gulp-gh-pages`);
 
 const cssFiles = [
   `./node_modules/normalize.css/normalize.css`,
@@ -113,5 +114,13 @@ gulp.task(`build`, gulp.series(
     imagesSvg
 )
 );
+
+gulp.task(`deploy`, () => {
+  return gulp.src(`./public/**/*`)
+    .pipe(deploy({
+      remoteUrl: `git@github.com:gretskovart/test-task-2.git`,
+      branch: `master`
+    }));
+});
 
 gulp.task(`dev`, gulp.series(`build`, `watch`));
